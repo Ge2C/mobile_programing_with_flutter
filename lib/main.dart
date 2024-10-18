@@ -63,6 +63,149 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ]
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+              ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+              ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+              ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text('Text Widget'),
+              ),
+            ]),
           ]
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
