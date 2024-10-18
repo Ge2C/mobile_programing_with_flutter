@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            ColoredBox(
+            const ColoredBox(
               color: Color.fromARGB(255, 205, 74, 74),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(50, 50, 50, 30),
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ]
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Padding(
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ]
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ]
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Padding(
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ]
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start, 
               children: <Widget>[
               Padding(
@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start, 
               children: <Widget>[
               Padding(
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               children: <Widget>[
               Padding(
@@ -159,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               children: <Widget>[
               Padding(
@@ -179,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               children: <Widget>[
               Padding(
@@ -195,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               children: <Widget>[
               Padding(
@@ -207,7 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Text Widget'),
               ),
             ]),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               children: <Widget>[
               Padding(
