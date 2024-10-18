@@ -40,15 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: const Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-              child: Text('Text Widget'),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-              child: Text('Text Widget'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+              ]
             ),
           ]
         ),
