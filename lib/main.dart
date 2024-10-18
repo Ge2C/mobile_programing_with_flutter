@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -50,7 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     image: AssetImage('images/logo.png')
                 ),
               ),
-            ),
+            ),  
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              ElevatedButton(
+                onPressed: () => <void>{},
+                child: const Text("Press Me!"),
+              )
+            ]),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
