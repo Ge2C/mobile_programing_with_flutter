@@ -53,8 +53,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),  
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all<Color>(
+                    const Color.fromARGB(255, 159, 107, 247)
+                  ),
+                  padding: WidgetStateProperty.all<EdgeInsets>(
+                    const EdgeInsets.all(25)
+                  ),
+                ),
                 onPressed: () => <void>{},
-                child: const Text("Press Me!", style: TextStyle(color: Colors.red)),
+                child: const Text("Press Me!", style: TextStyle(color: Colors.white)),
               )
             ]),
             const Row(
