@@ -42,8 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Image(
-              image: AssetImage('images/logo.png')
+            ColoredBox(
+              color: Color.fromARGB(255, 205, 74, 74),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(50, 50, 50, 30),
+                child: Image(
+                    image: AssetImage('images/logo.png')
+                ),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
