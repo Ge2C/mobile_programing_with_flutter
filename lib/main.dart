@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               ElevatedButton(
                 onPressed: () => <void>{},
-                child: const Text("Press Me!"),
+                child: const Text("Press Me!", style: TextStyle(color: Colors.red)),
               )
             ]),
             const Row(
