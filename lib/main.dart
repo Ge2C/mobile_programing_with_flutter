@@ -50,21 +50,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     image: AssetImage('images/logo.png')
                 ),
               ),
-            ),  
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all<Color>(
-                    const Color.fromARGB(255, 159, 107, 247)
-                  ),
-                  padding: WidgetStateProperty.all<EdgeInsets>(
-                    const EdgeInsets.all(25)
-                  ),
-                ),
-                onPressed: () => <void>{},
-                child: const Text("Press Me!", style: TextStyle(color: Colors.white)),
-              )
-            ]),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center, 
+                children: <Widget>[ 
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all<Color>(
+                        const Color.fromARGB(255, 159, 107, 247)
+                      ),
+                      padding: WidgetStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.all(25)
+                      ),
+                    ),
+                    onPressed: () => <void>{},
+                    child: const Text("Press Me!", style: TextStyle(color: Colors.white)),
+                  )
+              ]),
+            ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
