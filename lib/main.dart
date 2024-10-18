@@ -53,6 +53,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
                   child: Text('Text Widget'),
                 ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Text('Text Widget'),
+                ),
               ]
             ),
           ]
