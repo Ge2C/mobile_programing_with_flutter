@@ -62,11 +62,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Color.fromARGB(255, 159, 107, 247)
                       ),
                       padding: WidgetStateProperty.all<EdgeInsets>(
-                        const EdgeInsets.all(25)
+                        const EdgeInsets.fromLTRB(30, 10, 30, 10)
                       ),
                     ),
                     onPressed: () => <void>{},
-                    child: const Text("Press Me!", style: TextStyle(color: Colors.white)),
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                      children: <Widget>[
+                        Icon(
+                          Icons.android,
+                          color: Colors.white,
+                          size: 20.0,
+                        ),
+                        Text("Press Me!", style: TextStyle(color: Colors.white))
+                    ]),
                   )
               ]),
             ),
