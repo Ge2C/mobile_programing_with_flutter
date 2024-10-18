@@ -42,8 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Text Widget'), 
-            Text('Text Widget')],
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+              child: Text('Text Widget'),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+              child: Text('Text Widget'),
+            ),
+          ]
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
