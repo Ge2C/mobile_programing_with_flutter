@@ -34,7 +34,9 @@ class _SecondPageState extends State<SecondPage> {
                     backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 159, 107, 247)),
                     padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
                   ),
-                  onPressed: () => <void>{},
+                  onPressed: () => <void>{
+                      Navigator.pop(context, "Data Hasil")
+                    },
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                     children: <Widget>[
