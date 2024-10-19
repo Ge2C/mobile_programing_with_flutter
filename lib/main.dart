@@ -32,6 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String result = "Belum Ada";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,12 +90,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
               ]),
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.end, 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center, 
               children: <Widget>[
               Padding(
-                padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                child: Text('Text Widget'),
+                padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+                child: Text(result),
               ),
             ]),
           ]
