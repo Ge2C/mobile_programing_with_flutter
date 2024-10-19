@@ -19,10 +19,31 @@ class _SecondPageState extends State<SecondPage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start, 
-          children: <Widget>[
-            Text(widget.neededValue),
+        child: Column(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
+            child: Text(widget.neededValue),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center, 
+              children: <Widget>[
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 159, 107, 247)),
+                    padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
+                  ),
+                  onPressed: () => <void>{},
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                    children: <Widget>[
+                      Icon( Icons.arrow_back, color: Colors.white, size: 20.0),
+                      Text("Back!", style: TextStyle(color: Colors.white))
+                    ]),
+                )
+            ]),
+          ),
         ]),
       ),
     );
