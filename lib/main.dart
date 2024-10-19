@@ -66,7 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         const EdgeInsets.fromLTRB(30, 10, 30, 10)
                       ),
                     ),
-                    onPressed: () => <void>{},
+                    onPressed: () => <void>{
+                      Navigator.push(context, 
+                        MaterialPageRoute(builder: (context) => const SecondPage(
+                            title: "Pased value",
+                            neededValue: "This is sample value"
+                          )
+                        )
+                      )
+                    },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                       children: <Widget>[
