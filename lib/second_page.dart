@@ -54,7 +54,10 @@ class _SecondPageState extends State<SecondPage> {
                     backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 9, 125, 77)),
                     padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    loginState.loggin("test", "password");
+                    Navigator.pop(context, "Loged In");
+                  },
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                     children: <Widget>[
