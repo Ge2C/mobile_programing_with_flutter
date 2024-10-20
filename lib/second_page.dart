@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:mobile_programing_with_flutter/login_state.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key, this.title = "Second Page", this.neededValue = "Nothing"});
@@ -13,6 +15,9 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
+    
+    var loginState = Provider.of<LoginState>(context);
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
