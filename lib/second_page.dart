@@ -36,7 +36,7 @@ class _SecondPageState extends State<SecondPage> {
               children: <Widget>[
                 ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 159, 107, 247)),
+                    backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 180, 1, 4)),
                     padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
                   ),
                   onPressed: () => <void>{
@@ -46,9 +46,22 @@ class _SecondPageState extends State<SecondPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                     children: <Widget>[
                       Icon( Icons.arrow_back, color: Colors.white, size: 20.0),
-                      Text("Back!", style: TextStyle(color: Colors.white))
+                      Text("Back With Data!", style: TextStyle(color: Colors.white))
                     ]),
-                )
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 9, 125, 77)),
+                    padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
+                  ),
+                  onPressed: () {},
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                    children: <Widget>[
+                      Icon(Icons.login, color: Colors.white, size: 20.0), 
+                      Text("Login!", style: TextStyle(color: Colors.white))
+                  ]),
+                ),
             ]),
           ),
         ]),
