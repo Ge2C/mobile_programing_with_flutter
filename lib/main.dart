@@ -97,24 +97,44 @@ class _MyHomePageState extends State<MyHomePage> {
                           Text("Press Me!", style: TextStyle(color: Colors.white))
                       ]),
                     ),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 174, 0, 0)),
-                        padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
-                      ),
-                      onPressed: () async {
-                        loginState.logOut();
-                      },
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween, 
-                        children: <Widget>[
-                          Icon(Icons.logout, color: Colors.white, size: 20.0),
-                          Text("Logout!", style: TextStyle(color: Colors.white),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                      children: <Widget>[
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 174, 0, 0)),
+                            padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
+                          ),
+                          onPressed: () async {
+                            loginState.logOut();
+                          },
+                          child: const Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                            children: <Widget>[
+                              Icon(Icons.logout, color: Colors.white, size: 20.0),
+                              Text("Logout!", style: TextStyle(color: Colors.white),
+                            ),
+                          ])
                         ),
-                      ])
-                    )
-                  )
-              ]),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
+                          child: ElevatedButton(
+                            onPressed: () async {
+                            },
+                            child: const Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                              children: <Widget>[
+                                Icon(Icons.camera, size: 20.0),
+                                Text("Camera!"),
+                              ]
+                            ),
+                          ),
+                        ),
+                      ]
+                    ),
+                  ),
+                ]
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center, 
