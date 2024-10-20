@@ -76,7 +76,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 159, 107, 247)),
                         padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
                       ),
-                      onPressed: () async {},
+                      onPressed: () async {
+                        var catcher = await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SecondPage(
+                              title: "Login Page", 
+                              neededValue: "Please Login"
+                            ),
+                          ),
+                        );
+                        setState(() {
+                          result = catcher;
+                        });
+                      },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                         children: <Widget>[
