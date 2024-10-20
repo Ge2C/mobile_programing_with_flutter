@@ -102,7 +102,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         backgroundColor: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 174, 0, 0)),
                         padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(30, 10, 30, 10)),
                       ),
-                      onPressed: () async {},
+                      onPressed: () async {
+                        loginState.logOut();
+                      },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween, 
                         children: <Widget>[
