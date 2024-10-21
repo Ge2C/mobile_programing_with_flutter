@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:mobile_programing_with_flutter/second_page.dart';
 import 'package:mobile_programing_with_flutter/login_state.dart';
+import 'package:mobile_programing_with_flutter/camera_page.dart';
 
 void main() {
   runApp(
@@ -120,6 +121,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
                           child: ElevatedButton(
                             onPressed: () async {
+                              var captured = await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const CameraPage(),
+                                ),
+                              );
+                              setState(() { captured == null; });
                             },
                             child: const Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween, 
