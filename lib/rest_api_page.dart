@@ -83,6 +83,22 @@ class _RestApiPageState extends State<RestApiPage> {
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: TextFormField(
+                                          validator: (value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter post title';
+                                            }
+                                            return null;
+                                          },
+                                          controller: _titleCtrl,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Title',
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
