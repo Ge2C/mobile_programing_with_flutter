@@ -25,6 +25,32 @@ class _RestApiPageState extends State<RestApiPage> {
     }
   }
 
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _titleCtrl = TextEditingController();
+  final TextEditingController _bodyCtrl = TextEditingController();
+
+  Future<void> _postData() async {
+    final response = await http.post(
+      Uri.parse('https://jsonplaceholder.typicode.com/posts'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(<String, String>{ 
+        'title': _titleCtrl.text,
+        'body': _bodyCtrl.text,
+        'userId': '1',
+      }),
+    );
+
+    if (response.statusCode == 201) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Data berhasil dikirim!')),
+      );
+    } else {
+      throw Exception('Failed to post data');
+    }
+  }
+
   @override
   void initState() {
     super.initState();
