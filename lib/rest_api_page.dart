@@ -42,6 +42,19 @@ class _RestApiPageState extends State<RestApiPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(5, 20, 5, 30),
+              child: ElevatedButton(
+                onPressed: () async {},
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Icon(Icons.add, size: 20.0),
+                    Text("Add New Post"),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               child: _data.isEmpty
                   ? Center(child: CircularProgressIndicator())
