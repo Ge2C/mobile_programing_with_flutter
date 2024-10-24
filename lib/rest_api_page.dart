@@ -99,6 +99,25 @@ class _RestApiPageState extends State<RestApiPage> {
                                           ),
                                         ),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: TextFormField(
+                                          controller: _bodyCtrl,
+                                          validator: (value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter post text';
+                                            }
+                                            return null;
+                                          },
+                                          keyboardType: TextInputType.multiline,
+                                          minLines: 1,
+                                          maxLines: null,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Text',
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
