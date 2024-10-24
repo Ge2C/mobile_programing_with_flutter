@@ -118,6 +118,18 @@ class _RestApiPageState extends State<RestApiPage> {
                                           ),
                                         ),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: ElevatedButton(
+                                          child: const Text('Submit'),
+                                          onPressed: () async {
+                                            if (_formKey.currentState!.validate()) {
+                                              _formKey.currentState!.save();
+                                              await _postData();
+                                            }
+                                          },
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
