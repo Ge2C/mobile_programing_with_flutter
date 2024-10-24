@@ -35,7 +35,7 @@ class _RestApiPageState extends State<RestApiPage> {
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
-      body: jsonEncode(<String, String>{ 
+      body: jsonEncode(<String, String>{
         'title': _titleCtrl.text,
         'body': _bodyCtrl.text,
         'userId': '1',
@@ -76,8 +76,16 @@ class _RestApiPageState extends State<RestApiPage> {
                       context: context,
                       builder: (context) => AlertDialog(
                             content: Stack(
-                              clipBehavior: Clip.none ,
+                              clipBehavior: Clip.none,
                               children: <Widget>[
+                                Form(
+                                  key: _formKey,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ));
