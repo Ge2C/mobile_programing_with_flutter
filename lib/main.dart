@@ -4,8 +4,17 @@ import 'package:camera/camera.dart';
 import 'package:mobile_programing_with_flutter/second_page.dart';
 import 'package:mobile_programing_with_flutter/login_state.dart';
 import 'package:mobile_programing_with_flutter/camera_page.dart';
+import 'package:mobile_programing_with_flutter/rest_api_page.dart';
+import 'package:mobile_programing_with_flutter/firebase_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  
   runApp(
     ChangeNotifierProvider(
       create: (context) => LoginState(),
