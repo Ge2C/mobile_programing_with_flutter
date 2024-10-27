@@ -147,6 +147,26 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(5, 5, 5, 50),
+                          child: ElevatedButton(
+                            onPressed: () async {
+                              var catcher = await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RestApiPage(),
+                                ),
+                              );
+                              setState(() {
+                                result = catcher;
+                              });
+                            },
+                            child: const Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+                              Icon(Icons.send, size: 20.0),
+                              Text("REST API"),
+                            ]),
+                          ),
+                        ),
                       ]
                     ),
                   ),
