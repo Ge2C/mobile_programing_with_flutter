@@ -24,8 +24,30 @@ class _FirebasePageState extends State<FirebasePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
-              child: Text("Firebase page"),
+              padding: const EdgeInsets.fromLTRB(5, 20, 5, 30),
+              child: ElevatedButton(
+                onPressed: () async {},
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Icon(Icons.add, size: 20.0),
+                    Text("Add New User"),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: users.isEmpty
+                  ? Center(child: CircularProgressIndicator())
+                  : ListView.builder(
+                      itemCount: users.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(users[index]['name']),
+                          subtitle: Text(users[index]['email']),
+                        );
+                      },
+                    ),
             ),
           ],
         ),
