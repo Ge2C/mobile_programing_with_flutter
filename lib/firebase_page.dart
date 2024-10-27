@@ -52,7 +52,24 @@ class _FirebasePageState extends State<FirebasePage> {
                                   key: _formKey,
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
-                                    children: <Widget>[],
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: TextFormField(
+                                          validator: (value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter user name';
+                                            }
+                                            return null;
+                                          },
+                                          controller: _nameCtrl,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Name',
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
