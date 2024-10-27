@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:camera/camera.dart';
 import 'package:mobile_programing_with_flutter/second_page.dart';
 import 'package:mobile_programing_with_flutter/login_state.dart';
 import 'package:mobile_programing_with_flutter/camera_page.dart';
@@ -121,13 +122,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
                           child: ElevatedButton(
                             onPressed: () async {
-                              var captured = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const CameraPage(),
-                                ),
-                              );
-                              setState(() { captured == null; });
+                              WidgetsFlutterBinding.ensureInitialized();
+
+                              final cameras = await availableCameras();
+                              cameras;
+                              // final CameraDescription firstCamera = cameras.first;
+
+                               if (context.mounted) {
+                                var captured = await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => CameraPage(),
+                                  ),
+                                );
+                                setState(() { captured == null; });
+                              }
                             },
                             child: const Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween, 

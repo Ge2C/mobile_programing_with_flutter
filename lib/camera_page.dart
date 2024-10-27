@@ -20,8 +20,8 @@ class _CameraPageState extends State<CameraPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(50, 50, 50, 30),
-              child: Text("Camera page")
+              padding: const EdgeInsets.fromLTRB(50, 50, 50, 30), 
+              child: Text("Camera page"),
             ),
           ],
         ),
