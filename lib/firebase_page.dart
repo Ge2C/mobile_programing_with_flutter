@@ -27,6 +27,17 @@ class _FirebasePageState extends State<FirebasePage> {
     db.collection("users").add(user);
   }
 
+  void _getUsers() async {
+    await db.collection("users").orderBy("timestamp", descending: true).get().then((event) {
+      setState(() {
+        users = [];
+        for (var doc in event.docs) {
+          users.add(doc.data());
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
