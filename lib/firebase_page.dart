@@ -12,6 +12,21 @@ class _FirebasePageState extends State<FirebasePage> {
   var db = FirebaseFirestore.instance;
   List<Map<String, dynamic>> users = [];
 
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _nameCtrl = TextEditingController();
+  final TextEditingController _emailCtrl = TextEditingController();
+  final TextEditingController _passwordCtrl = TextEditingController();
+
+  void _addUser() {
+    final user = <String, dynamic>{
+      "name": _nameCtrl.text,
+      "email": _emailCtrl.text,
+      'password': _passwordCtrl.text,
+      "timestamp": FieldValue.serverTimestamp(),
+    };
+    db.collection("users").add(user);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
