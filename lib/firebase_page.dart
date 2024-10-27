@@ -101,6 +101,18 @@ class _FirebasePageState extends State<FirebasePage> {
                                           ),
                                         ),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: ElevatedButton(
+                                          child: const Text('Submit'),
+                                          onPressed: () async {
+                                            if (_formKey.currentState!.validate()) {
+                                              _formKey.currentState!.save();
+                                              _addUser();
+                                            }
+                                          },
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
