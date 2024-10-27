@@ -41,7 +41,24 @@ class _FirebasePageState extends State<FirebasePage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(5, 20, 5, 30),
               child: ElevatedButton(
-                onPressed: () async {},
+                onPressed: () async {
+                  await showDialog<void>(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                            content: Stack(
+                              clipBehavior: Clip.none,
+                              children: <Widget>[
+                                Form(
+                                  key: _formKey,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ));
+                },
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
