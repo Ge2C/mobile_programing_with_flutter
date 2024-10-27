@@ -69,6 +69,38 @@ class _FirebasePageState extends State<FirebasePage> {
                                           ),
                                         ),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: TextFormField(
+                                          validator: (value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter user email';
+                                            }
+                                            return null;
+                                          },
+                                          controller: _emailCtrl,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Email',
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: TextFormField(
+                                          validator: (value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter user password';
+                                            }
+                                            return null;
+                                          },
+                                          controller: _passwordCtrl,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Password',
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
