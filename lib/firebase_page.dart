@@ -24,7 +24,7 @@ class _FirebasePageState extends State<FirebasePage> {
       'password': _passwordCtrl.text,
       "timestamp": FieldValue.serverTimestamp(),
     };
-    db.collection("users").add(user);
+    db.collection("users").add(user).then((DocumentReference doc) => _getUsers());
   }
 
   void _getUsers() async {
@@ -36,6 +36,12 @@ class _FirebasePageState extends State<FirebasePage> {
         }
       });
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getUsers();
   }
 
   @override
